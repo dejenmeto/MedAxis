@@ -1,0 +1,844 @@
+.contact-admin-page {
+  --admin-primary: #176b87;
+  --admin-primary-dark: #10536b;
+  --admin-text: #1c3442;
+  --admin-muted: #748590;
+  --admin-border: #dfe7ec;
+  --admin-background: #f5f8fa;
+  --admin-white: #ffffff;
+
+  min-height: 100%;
+  padding: 28px;
+  background: var(--admin-background);
+  color: var(--admin-text);
+}
+
+.contact-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 27px;
+}
+
+.contact-admin-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--admin-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.contact-admin-header h1 {
+  margin: 11px 0 8px;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.contact-admin-header p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--admin-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.contact-admin-refresh {
+  display: inline-flex;
+  min-height: 42px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 15px;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  background: var(--admin-white);
+  color: var(--admin-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.contact-admin-refresh:hover:not(:disabled) {
+  border-color: var(--admin-primary);
+  color: var(--admin-primary);
+}
+
+.contact-admin-refresh:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.contact-admin-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-admin-summary-card {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--admin-border);
+  border-radius: 12px;
+  background: var(--admin-white);
+}
+
+.contact-admin-summary-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 11px;
+  font-size: 1.25rem;
+}
+
+.contact-admin-summary-icon.total {
+  background: #eaf3fb;
+  color: #316d9e;
+}
+
+.contact-admin-summary-icon.new {
+  background: #e6f5fa;
+  color: #147c9b;
+}
+
+.contact-admin-summary-icon.progress {
+  background: #fff4df;
+  color: #9c6a17;
+}
+
+.contact-admin-summary-icon.resolved {
+  background: #e8f7ed;
+  color: #27794a;
+}
+
+.contact-admin-summary-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--admin-muted);
+  font-size: 0.81rem;
+  line-height: 1.4;
+}
+
+.contact-admin-summary-card strong {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.contact-admin-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 13px 15px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 0.89rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.contact-admin-alert > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-admin-alert span {
+  flex: 1;
+}
+
+.contact-admin-alert > button {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  padding: 3px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.contact-admin-alert.is-error {
+  border-color: #efcaca;
+  background: #fff0f0;
+  color: #8d3030;
+}
+
+.contact-admin-alert.is-success {
+  border-color: #c6e7d2;
+  background: #eef9f1;
+  color: #216c40;
+}
+
+.contact-admin-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(310px, 0.9fr);
+  align-items: stretch;
+  gap: 20px;
+}
+
+.contact-admin-inbox,
+.contact-admin-details {
+  min-width: 0;
+  border: 1px solid var(--admin-border);
+  border-radius: 12px;
+  background: var(--admin-white);
+}
+
+.contact-admin-inbox {
+  display: flex;
+  min-height: 600px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-admin-inbox-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 21px 15px;
+}
+
+.contact-admin-inbox-heading h2 {
+  margin: 0 0 5px;
+  font-size: 1.12rem;
+}
+
+.contact-admin-inbox-heading p {
+  margin: 0;
+  color: var(--admin-muted);
+  font-size: 0.83rem;
+}
+
+.contact-admin-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 145px;
+  gap: 10px;
+  padding: 0 21px 17px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.contact-admin-search {
+  display: flex;
+  min-width: 0;
+  min-height: 42px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 11px;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  color: var(--admin-muted);
+}
+
+.contact-admin-search:focus-within {
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 3px rgb(23 107 135 / 8%);
+}
+
+.contact-admin-search svg {
+  flex-shrink: 0;
+}
+
+.contact-admin-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--admin-text);
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.contact-admin-search input::placeholder {
+  color: #9aa9b2;
+}
+
+.contact-admin-status-filter {
+  width: 100%;
+  min-width: 0;
+  padding: 0 9px;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  outline: none;
+  background: var(--admin-white);
+  color: var(--admin-text);
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+.contact-admin-status-filter:focus {
+  border-color: var(--admin-primary);
+}
+
+.contact-admin-message-list {
+  flex: 1;
+}
+
+.contact-admin-message-row {
+  display: block;
+  width: 100%;
+  padding: 17px 21px;
+  border: 0;
+  border-bottom: 1px solid #edf1f4;
+  background: var(--admin-white);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.contact-admin-message-row:hover {
+  background: #f7fafb;
+}
+
+.contact-admin-message-row.is-selected {
+  border-left: 3px solid var(--admin-primary);
+  background: #edf7fa;
+  padding-left: 18px;
+}
+
+.contact-admin-message-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+}
+
+.contact-admin-sender {
+  overflow: hidden;
+  font-size: 0.91rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-admin-status {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.contact-admin-status.status-new {
+  background: #e5f4fb;
+  color: #166d8a;
+}
+
+.contact-admin-status.status-read {
+  background: #edf0f4;
+  color: #536474;
+}
+
+.contact-admin-status.status-in_progress {
+  background: #fff2d9;
+  color: #8b6217;
+}
+
+.contact-admin-status.status-resolved {
+  background: #e5f6eb;
+  color: #287548;
+}
+
+.contact-admin-status.status-archived {
+  background: #f0edf4;
+  color: #6d5a7d;
+}
+
+.contact-admin-message-subject,
+.contact-admin-message-preview {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-admin-message-subject {
+  margin-bottom: 6px;
+  color: #314d5b;
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.contact-admin-message-preview {
+  color: var(--admin-muted);
+  font-size: 0.81rem;
+  line-height: 1.6;
+}
+
+.contact-admin-message-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 11px;
+  color: #8a99a3;
+  font-size: 0.73rem;
+}
+
+.contact-admin-message-meta span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-admin-empty {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  color: var(--admin-muted);
+  text-align: center;
+}
+
+.contact-admin-empty > svg {
+  font-size: 1.6rem;
+}
+
+.contact-admin-empty h3 {
+  margin: 13px 0 7px;
+  color: var(--admin-text);
+  font-size: 1rem;
+}
+
+.contact-admin-empty p {
+  max-width: 280px;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.contact-admin-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding: 15px 20px;
+  border-top: 1px solid var(--admin-border);
+  color: var(--admin-muted);
+  font-size: 0.78rem;
+}
+
+.contact-admin-pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--admin-text);
+}
+
+.contact-admin-pagination-buttons button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--admin-border);
+  border-radius: 7px;
+  background: var(--admin-white);
+  color: var(--admin-text);
+  cursor: pointer;
+}
+
+.contact-admin-pagination-buttons button:hover:not(:disabled) {
+  border-color: var(--admin-primary);
+  color: var(--admin-primary);
+}
+
+.contact-admin-pagination-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.contact-admin-details {
+  align-self: start;
+  min-height: 600px;
+  padding: 23px;
+}
+
+.contact-admin-details-empty {
+  display: flex;
+  min-height: 530px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-admin-details-empty-icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 17px;
+  background: #eaf5f8;
+  color: var(--admin-primary);
+  font-size: 1.6rem;
+}
+
+.contact-admin-details-empty h2 {
+  margin: 19px 0 9px;
+  font-size: 1.15rem;
+}
+
+.contact-admin-details-empty p {
+  max-width: 270px;
+  margin: 0;
+  color: var(--admin-muted);
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+
+.contact-admin-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.contact-admin-section-label {
+  color: var(--admin-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.contact-admin-details-header h2 {
+  margin: 9px 0 0;
+  overflow-wrap: anywhere;
+  font-size: 1.23rem;
+  line-height: 1.45;
+}
+
+.contact-admin-close-details {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  background: var(--admin-white);
+  color: var(--admin-muted);
+  cursor: pointer;
+}
+
+.contact-admin-close-details:hover {
+  color: var(--admin-text);
+}
+
+.contact-admin-sender-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.contact-admin-avatar {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5f2f6;
+  color: var(--admin-primary);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.contact-admin-sender-details {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.contact-admin-sender-details strong {
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+
+.contact-admin-sender-details a {
+  overflow-wrap: anywhere;
+  color: var(--admin-primary);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.contact-admin-sender-details a:hover {
+  text-decoration: underline;
+}
+
+.contact-admin-sender-details span {
+  color: var(--admin-muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.contact-admin-message-content {
+  padding: 20px 0;
+}
+
+.contact-admin-message-content h3 {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+}
+
+.contact-admin-message-content p {
+  margin: 0;
+  color: #536975;
+  font-size: 0.88rem;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.contact-admin-edit-form {
+  display: grid;
+  gap: 18px;
+  padding-top: 20px;
+  border-top: 1px solid var(--admin-border);
+}
+
+.contact-admin-field {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-admin-field label {
+  font-size: 0.84rem;
+  font-weight: 750;
+}
+
+.contact-admin-field select,
+.contact-admin-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  outline: none;
+  background: var(--admin-white);
+  color: var(--admin-text);
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.contact-admin-field select {
+  min-height: 42px;
+}
+
+.contact-admin-field textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.contact-admin-field select:focus,
+.contact-admin-field textarea:focus {
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 3px rgb(23 107 135 / 8%);
+}
+
+.contact-admin-field :disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.contact-admin-note-count {
+  justify-self: end;
+  color: var(--admin-muted);
+  font-size: 0.74rem;
+}
+
+.contact-admin-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-admin-save-button,
+.contact-admin-archive-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+.contact-admin-save-button {
+  flex: 1;
+  background: var(--admin-primary);
+  color: #ffffff;
+}
+
+.contact-admin-save-button:hover:not(:disabled) {
+  background: var(--admin-primary-dark);
+}
+
+.contact-admin-archive-button {
+  border-color: #e8d8d8;
+  background: #fff8f8;
+  color: #8b4141;
+}
+
+.contact-admin-archive-button:hover:not(:disabled) {
+  background: #fff0f0;
+}
+
+.contact-admin-save-button:disabled,
+.contact-admin-archive-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.contact-admin-private-note {
+  margin: 17px 0 0;
+  color: var(--admin-muted);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.is-spinning {
+  animation: contact-admin-spin 1s linear infinite;
+}
+
+@keyframes contact-admin-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1150px) {
+  .contact-admin-page {
+    padding: 22px;
+  }
+
+  .contact-admin-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-admin-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-admin-details {
+    min-height: auto;
+  }
+
+  .contact-admin-details-empty {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-admin-page {
+    padding: 15px;
+  }
+
+  .contact-admin-header {
+    flex-direction: column;
+  }
+
+  .contact-admin-refresh {
+    align-self: flex-start;
+  }
+
+  .contact-admin-summary {
+    gap: 10px;
+  }
+
+  .contact-admin-summary-card {
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  .contact-admin-summary-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+
+  .contact-admin-summary-card span {
+    font-size: 0.74rem;
+  }
+
+  .contact-admin-summary-card strong {
+    font-size: 1.35rem;
+  }
+
+  .contact-admin-filters {
+    grid-template-columns: 1fr;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .contact-admin-inbox-heading {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .contact-admin-message-row {
+    padding: 15px 14px;
+  }
+
+  .contact-admin-message-row.is-selected {
+    padding-left: 11px;
+  }
+
+  .contact-admin-message-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contact-admin-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  .contact-admin-pagination-buttons {
+    align-self: flex-end;
+  }
+
+  .contact-admin-details {
+    padding: 17px;
+  }
+
+  .contact-admin-detail-actions {
+    flex-direction: column;
+  }
+
+  .contact-admin-save-button,
+  .contact-admin-archive-button {
+    width: 100%;
+  }
+}

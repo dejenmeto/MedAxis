@@ -1,0 +1,86 @@
+.patient-portal-admin-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+.patient-portal-admin-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.patient-portal-admin-form input,
+.patient-portal-admin-form select {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 10px;
+  border: 1px solid var(--border-color, #dfe5ec);
+  border-radius: 7px;
+  background: var(--bg-input, #fff);
+  color: inherit;
+  font: inherit;
+}
+
+.patient-portal-admin-form button,
+.patient-portal-admin-actions button,
+.patient-portal-admin-secondary {
+  min-height: 38px;
+  padding: 9px 12px;
+  border: 1px solid #2457a7;
+  border-radius: 7px;
+  background: #2457a7;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.patient-portal-admin-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.patient-portal-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.patient-portal-admin-table th,
+.patient-portal-admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color, #dfe5ec);
+  white-space: nowrap;
+}
+
+.patient-portal-admin-table th {
+  background: var(--bg-secondary, #f5f7fa);
+}
+
+.patient-portal-admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.patient-portal-admin-actions .patient-portal-admin-danger {
+  border-color: #b42318;
+  background: #b42318;
+}
+
+.patient-portal-admin-secondary {
+  background: transparent;
+  color: #2457a7;
+}
+
+@media (max-width: 760px) {
+  .patient-portal-admin-form {
+    grid-template-columns: 1fr;
+  }
+}

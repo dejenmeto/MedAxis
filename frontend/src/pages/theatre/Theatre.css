@@ -1,0 +1,1029 @@
+/* =========================================================
+   Operating Theatre — MedAxis Hospital ERP
+   Responsive, professional styling
+========================================================= */
+
+.theatre-page {
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+  color: #1e293b;
+  background: #f6f8fc;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.theatre-page *,
+.theatre-page *::before,
+.theatre-page *::after {
+  box-sizing: border-box;
+}
+
+/* ---------------- Header ---------------- */
+
+.theatre-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.theatre-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.theatre-heading-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  color: #2563eb;
+  background: #e9f0ff;
+  border: 1px solid #dbe7ff;
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.theatre-eyebrow {
+  margin: 0 0 5px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.theatre-heading h1 {
+  margin: 0;
+  color: #172554;
+  font-size: clamp(23px, 2vw, 30px);
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.theatre-subtitle {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.theatre-header-actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------------- Buttons ---------------- */
+
+.theatre-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.theatre-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.theatre-button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.theatre-button-primary {
+  color: #ffffff;
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.theatre-button-primary:not(:disabled):hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.theatre-button-secondary {
+  color: #334155;
+  background: #ffffff;
+  border-color: #dbe2ec;
+}
+
+.theatre-button-secondary:not(:disabled):hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.theatre-button svg {
+  flex-shrink: 0;
+  font-size: 15px;
+}
+
+.theatre-spin {
+  animation: theatre-spin 1s linear infinite;
+}
+
+@keyframes theatre-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------- Alerts ---------------- */
+
+.theatre-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border: 1px solid;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.theatre-alert > svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 17px;
+}
+
+.theatre-alert span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.theatre-alert button {
+  display: inline-flex;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.theatre-alert-error {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.theatre-alert-success {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+/* ---------------- Statistics ---------------- */
+
+.theatre-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.theatre-stat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e7ecf3;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.theatre-stat-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 11px;
+  font-size: 20px;
+}
+
+.theatre-stat-blue {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.theatre-stat-amber {
+  color: #b45309;
+  background: #fffbeb;
+}
+
+.theatre-stat-purple {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.theatre-stat-green {
+  color: #15803d;
+  background: #f0fdf4;
+}
+
+.theatre-stat-card > div:last-child {
+  min-width: 0;
+}
+
+.theatre-stat-card p {
+  margin: 1px 0 8px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.theatre-stat-card h2 {
+  margin: 0 0 7px;
+  color: #172554;
+  font-size: 29px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.theatre-stat-card span {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ---------------- Main workspace ---------------- */
+
+.theatre-workspace {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e7ecf3;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 3%);
+}
+
+.theatre-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px 23px 18px;
+}
+
+.theatre-section-heading h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.theatre-section-heading p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ---------------- Tabs ---------------- */
+
+.theatre-tabs {
+  display: flex;
+  gap: 24px;
+  padding: 0 23px;
+  overflow-x: auto;
+  border-bottom: 1px solid #e7ecf3;
+}
+
+.theatre-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 14px 2px 13px;
+  color: #64748b;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.theatre-tabs button svg {
+  font-size: 15px;
+}
+
+.theatre-tabs button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 21px;
+  padding: 0 6px;
+  color: #64748b;
+  background: #f1f5f9;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+.theatre-tabs button.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.theatre-tabs button.active span {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.theatre-tab-content {
+  min-width: 0;
+  padding: 20px 23px 22px;
+}
+
+/* ---------------- Toolbar / Search ---------------- */
+
+.theatre-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-bottom: 18px;
+}
+
+.theatre-search {
+  display: flex;
+  flex: 1 1 250px;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  max-width: 390px;
+  height: 40px;
+  padding: 0 12px;
+  color: #94a3b8;
+  background: #ffffff;
+  border: 1px solid #dbe2ec;
+  border-radius: 8px;
+}
+
+.theatre-search > svg {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.theatre-search input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  color: #1e293b;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 12px;
+}
+
+.theatre-search input::placeholder {
+  color: #94a3b8;
+}
+
+.theatre-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 10px;
+  color: #64748b;
+  border: 1px solid #dbe2ec;
+  border-radius: 8px;
+}
+
+.theatre-filter svg {
+  flex-shrink: 0;
+}
+
+.theatre-filter select {
+  max-width: 155px;
+  color: #334155;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.theatre-result-description {
+  flex: 1;
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ---------------- Forms ---------------- */
+
+.theatre-form-card {
+  margin: 0 0 22px;
+  padding: 20px;
+  background: #f8faff;
+  border: 1px solid #dbe7ff;
+  border-radius: 11px;
+}
+
+.theatre-form-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.theatre-form-heading h3 {
+  margin: 0;
+  color: #172554;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.theatre-form-heading p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.theatre-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  color: #64748b;
+  background: #ffffff;
+  border: 1px solid #dbe2ec;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.theatre-icon-button:hover {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.theatre-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.theatre-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.theatre-form-grid input,
+.theatre-form-grid select,
+.theatre-form-grid textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 11px;
+  color: #1e293b;
+  background: #ffffff;
+  border: 1px solid #d5deea;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.theatre-form-grid input,
+.theatre-form-grid select {
+  min-height: 40px;
+}
+
+.theatre-form-grid textarea {
+  min-height: 82px;
+  resize: vertical;
+}
+
+.theatre-form-grid input:focus,
+.theatre-form-grid select:focus,
+.theatre-form-grid textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 10%);
+}
+
+.theatre-field-full {
+  grid-column: 1 / -1;
+}
+
+.theatre-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ---------------- Tables ---------------- */
+
+.theatre-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e7ecf3;
+  border-radius: 9px;
+}
+
+.theatre-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.theatre-table th {
+  padding: 13px 14px;
+  color: #64748b;
+  background: #f8fafc;
+  border-bottom: 1px solid #e7ecf3;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.theatre-table td {
+  padding: 15px 14px;
+  color: #475569;
+  border-bottom: 1px solid #edf1f6;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.theatre-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.theatre-table tbody tr:hover {
+  background: #fbfdff;
+}
+
+.theatre-table td strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.theatre-table-message {
+  padding: 32px 15px !important;
+  text-align: center;
+}
+
+.theatre-cell-description {
+  max-width: 300px;
+  margin: 5px 0 0;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.theatre-table-footer {
+  padding-top: 13px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* ---------------- Status and priority ---------------- */
+
+.theatre-status-select {
+  max-width: 145px;
+  min-height: 32px;
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  outline: none;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.theatre-status-scheduled {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.theatre-status-in_progress {
+  color: #92400e;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.theatre-status-completed {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.theatre-status-cancelled {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.theatre-priority {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 750;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.theatre-priority-low {
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.theatre-priority-normal {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.theatre-priority-high {
+  color: #b45309;
+  background: #fffbeb;
+}
+
+.theatre-priority-emergency {
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+/* ---------------- Room cards ---------------- */
+
+.theatre-room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.theatre-room-card {
+  min-width: 0;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.theatre-room-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 14px rgb(15 23 42 / 5%);
+}
+
+.theatre-room-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 17px;
+}
+
+.theatre-room-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.theatre-room-status {
+  display: inline-flex;
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: #166534;
+  background: #f0fdf4;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.theatre-room-status-maintenance,
+.theatre-room-status-inactive,
+.theatre-room-status-unavailable {
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+.theatre-room-status-occupied,
+.theatre-room-status-in_use {
+  color: #92400e;
+  background: #fffbeb;
+}
+
+.theatre-room-card h3 {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #172554;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.theatre-room-number {
+  margin: 6px 0 17px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.theatre-room-details {
+  display: grid;
+  grid-template-columns: minmax(55px, 0.7fr) minmax(0, 1.3fr);
+  gap: 11px 10px;
+  padding-top: 14px;
+  border-top: 1px solid #edf1f6;
+}
+
+.theatre-room-details span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.theatre-room-details strong {
+  overflow-wrap: anywhere;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 650;
+  text-align: right;
+}
+
+.theatre-inline-message {
+  grid-column: 1 / -1;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.theatre-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 28px 15px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.theatre-empty-state > svg {
+  margin-bottom: 4px;
+  color: #94a3b8;
+  font-size: 27px;
+}
+
+.theatre-empty-state strong {
+  color: #334155;
+  font-size: 13px;
+}
+
+.theatre-empty-state span {
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.theatre-empty-card {
+  grid-column: 1 / -1;
+  min-height: 180px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 1200px) {
+  .theatre-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .theatre-room-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .theatre-page {
+    padding: 17px;
+  }
+
+  .theatre-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .theatre-header-actions {
+    width: 100%;
+  }
+
+  .theatre-header-actions .theatre-button {
+    flex: 1;
+  }
+
+  .theatre-stat-grid {
+    gap: 11px;
+    margin-bottom: 18px;
+  }
+
+  .theatre-stat-card {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .theatre-stat-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
+  }
+
+  .theatre-stat-card h2 {
+    font-size: 24px;
+  }
+
+  .theatre-stat-card p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .theatre-section-heading {
+    padding: 18px 16px 15px;
+  }
+
+  .theatre-tabs {
+    gap: 18px;
+    padding: 0 16px;
+  }
+
+  .theatre-tab-content {
+    padding: 16px;
+  }
+
+  .theatre-toolbar {
+    align-items: stretch;
+  }
+
+  .theatre-search {
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .theatre-filter {
+    flex: 1;
+  }
+
+  .theatre-filter select {
+    flex: 1;
+    max-width: none;
+  }
+
+  .theatre-toolbar > .theatre-button {
+    flex: 1;
+  }
+
+  .theatre-form-card {
+    padding: 15px;
+  }
+
+  .theatre-room-grid {
+    gap: 11px;
+  }
+
+  .theatre-room-card {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theatre-page {
+    padding: 12px;
+  }
+
+  .theatre-heading {
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  .theatre-heading-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    font-size: 20px;
+  }
+
+  .theatre-heading h1 {
+    font-size: 22px;
+  }
+
+  .theatre-subtitle {
+    font-size: 12px;
+  }
+
+  .theatre-header-actions {
+    gap: 8px;
+  }
+
+  .theatre-header-actions .theatre-button {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .theatre-stat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .theatre-stat-card {
+    flex-direction: column;
+    padding: 13px;
+  }
+
+  .theatre-stat-card h2 {
+    font-size: 25px;
+  }
+
+  .theatre-stat-card span {
+    font-size: 10px;
+  }
+
+  .theatre-tabs {
+    gap: 16px;
+  }
+
+  .theatre-tabs button {
+    font-size: 11px;
+  }
+
+  .theatre-form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .theatre-field-full {
+    grid-column: auto;
+  }
+
+  .theatre-room-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theatre-form-actions .theatre-button {
+    flex: 1;
+  }
+}

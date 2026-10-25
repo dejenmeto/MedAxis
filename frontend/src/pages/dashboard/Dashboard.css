@@ -1,0 +1,274 @@
+.dashboard-page {
+  display: grid;
+  gap: 22px;
+}
+
+.dashboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.dashboard-eyebrow {
+  color: #087f72;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-heading h1 {
+  margin: 7px 0 0;
+  color: #183651;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.dashboard-heading p,
+.dashboard-panel-heading p {
+  margin: 7px 0 0;
+  color: #75879a;
+  font-size: 12px;
+}
+
+.dashboard-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 39px;
+  padding: 0 13px;
+  border: 1px solid #dce6ed;
+  border-radius: 8px;
+  background: #fff;
+  color: #38556d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.dashboard-stat-card,
+.dashboard-panel {
+  border: 1px solid #e2eaf0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.dashboard-stat-card {
+  min-width: 0;
+  padding: 18px;
+}
+
+.dashboard-stat-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  color: #718397;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dashboard-stat-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  place-items: center;
+  border-radius: 9px;
+  background: #e4f6f2;
+  color: #087f72;
+  font-size: 17px;
+}
+
+.dashboard-stat-card > strong {
+  display: block;
+  overflow-wrap: anywhere;
+  margin-top: 17px;
+  color: #183651;
+  font-size: clamp(23px, 2.5vw, 29px);
+  font-weight: 800;
+}
+
+.dashboard-stat-card > small {
+  display: block;
+  margin-top: 6px;
+  color: #8493a2;
+  font-size: 10px;
+}
+
+.dashboard-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(270px, 0.7fr);
+  gap: 18px;
+}
+
+.dashboard-panel {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.dashboard-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 19px 20px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.dashboard-panel-heading h2 {
+  margin: 0;
+  color: #193651;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.dashboard-panel-heading > a {
+  color: #087f72;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dashboard-chart {
+  height: 285px;
+  padding: 20px 12px 12px;
+}
+
+.dashboard-chart-empty,
+.dashboard-table-empty {
+  padding: 30px;
+  color: #8191a1;
+  font-size: 12px;
+  text-align: center;
+}
+
+.dashboard-quick-actions {
+  display: grid;
+  gap: 3px;
+  padding: 10px;
+}
+
+.dashboard-quick-actions a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 10px;
+  border-radius: 9px;
+  color: #087f72;
+  text-decoration: none;
+}
+
+.dashboard-quick-actions a:hover {
+  background: #f2f9f8;
+}
+
+.dashboard-quick-actions a > svg {
+  flex: 0 0 auto;
+  font-size: 18px;
+}
+
+.dashboard-quick-actions strong,
+.dashboard-quick-actions small {
+  display: block;
+}
+
+.dashboard-quick-actions strong {
+  color: #27445d;
+  font-size: 12px;
+}
+
+.dashboard-quick-actions small {
+  margin-top: 4px;
+  color: #8292a1;
+  font-size: 10px;
+}
+
+.dashboard-appointments-panel .table {
+  margin: 0;
+  font-size: 12px;
+}
+
+.dashboard-table thead th {
+  padding: 13px 17px;
+  background: #f8fafc;
+  color: #718397;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.dashboard-table tbody td {
+  padding: 14px 17px;
+  color: #4c657b;
+}
+
+.dashboard-status {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #edf2f7;
+  color: #52677a;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.status-completed {
+  background: #e2f6ed;
+  color: #16734a;
+}
+
+.status-cancelled {
+  background: #fce8e8;
+  color: #a43c3c;
+}
+
+.status-scheduled,
+.status-confirmed {
+  background: #e5efff;
+  color: #2d5d9b;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-stat-grid {
+    gap: 10px;
+  }
+
+  .dashboard-stat-card {
+    padding: 13px;
+  }
+
+  .dashboard-stat-top {
+    font-size: 10px;
+  }
+
+  .dashboard-stat-icon {
+    width: 31px;
+    height: 31px;
+    flex-basis: 31px;
+  }
+
+  .dashboard-panel-heading {
+    padding: 15px;
+  }
+}

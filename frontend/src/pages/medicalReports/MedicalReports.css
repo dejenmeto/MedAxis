@@ -1,0 +1,474 @@
+.medical-reports-page {
+  --mr-primary: #176b62;
+  --mr-border: #e1e8ed;
+  --mr-text: #20323f;
+  --mr-muted: #70808d;
+  padding: 24px;
+  color: var(--mr-text);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.mr-header,
+.mr-modal-header,
+.mr-pagination,
+.mr-toolbar,
+.mr-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.mr-header {
+  margin-bottom: 24px;
+}
+
+.mr-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 6px 0;
+}
+
+.mr-header h1 svg {
+  color: var(--mr-primary);
+}
+
+.mr-header p,
+.mr-modal-header p {
+  color: var(--mr-muted);
+  margin: 5px 0 0;
+}
+
+.mr-eyebrow {
+  color: var(--mr-primary);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.mr-primary,
+.mr-secondary,
+.mr-pagination button,
+.mr-icon-button {
+  min-height: 40px;
+  padding: 9px 14px;
+  border: 1px solid var(--mr-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--mr-text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.mr-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: var(--mr-primary);
+  color: #fff;
+  border-color: var(--mr-primary);
+  font-weight: 650;
+}
+
+.mr-primary:disabled,
+.mr-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mr-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.mr-summary > div,
+.mr-panel {
+  background: #fff;
+  border: 1px solid var(--mr-border);
+  border-radius: 12px;
+}
+
+.mr-summary > div {
+  padding: 18px;
+}
+
+.mr-summary span,
+.mr-summary strong {
+  display: block;
+}
+
+.mr-summary span {
+  color: var(--mr-muted);
+  font-size: 0.88rem;
+}
+
+.mr-summary strong {
+  margin-top: 8px;
+  font-size: 1.7rem;
+}
+
+.mr-panel {
+  overflow: hidden;
+}
+
+.mr-toolbar {
+  flex-wrap: wrap;
+  padding: 16px;
+  border-bottom: 1px solid var(--mr-border);
+}
+
+.mr-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1 1 240px;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--mr-border);
+  border-radius: 8px;
+}
+
+.mr-search svg {
+  color: var(--mr-muted);
+  flex-shrink: 0;
+}
+
+.mr-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  font: inherit;
+  background: transparent;
+  color: var(--mr-text);
+}
+
+.mr-toolbar select,
+.mr-form input,
+.mr-form select,
+.mr-form textarea {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--mr-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--mr-text);
+  font: inherit;
+}
+
+.mr-toolbar select {
+  width: auto;
+  max-width: 190px;
+}
+
+.mr-archived-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.mr-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.mr-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.mr-table th,
+.mr-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #edf1f4;
+  vertical-align: middle;
+}
+
+.mr-table th {
+  background: #f8fafb;
+  color: #536573;
+  font-size: 0.78rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.mr-table td {
+  font-size: 0.9rem;
+}
+
+.mr-table tbody tr:hover {
+  background: #fbfdfd;
+}
+
+.mr-report-link {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--mr-primary);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mr-table td small {
+  display: block;
+  color: var(--mr-muted);
+  margin-top: 5px;
+}
+
+.mr-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.mr-status-draft {
+  background: #fff3d9;
+  color: #865b00;
+}
+
+.mr-status-final {
+  background: #dff4e9;
+  color: #176640;
+}
+
+.mr-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mr-actions button,
+.mr-modal-header > button {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--mr-border);
+  border-radius: 7px;
+  background: #fff;
+  color: #425663;
+  cursor: pointer;
+}
+
+.mr-actions button:hover,
+.mr-icon-button:hover {
+  color: var(--mr-primary);
+  border-color: var(--mr-primary);
+}
+
+.mr-empty {
+  padding: 40px !important;
+  text-align: center;
+  color: var(--mr-muted);
+}
+
+.mr-pagination {
+  padding: 15px 16px;
+  color: var(--mr-muted);
+  font-size: 0.88rem;
+}
+
+.mr-pagination > div {
+  display: flex;
+  gap: 8px;
+}
+
+.mr-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(18 33 43 / 55%);
+}
+
+.mr-modal {
+  width: min(720px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 65px rgb(0 0 0 / 18%);
+}
+
+.mr-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 18px 22px;
+  background: #fff;
+  border-bottom: 1px solid var(--mr-border);
+}
+
+.mr-modal-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.mr-form {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+}
+
+.mr-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.mr-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.mr-form input:focus,
+.mr-form select:focus,
+.mr-form textarea:focus {
+  outline: 2px solid rgb(23 107 98 / 18%);
+  border-color: var(--mr-primary);
+}
+
+.mr-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mr-form-actions {
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.mr-view-backdrop {
+  z-index: 1001;
+}
+
+.mr-report-paper {
+  width: min(850px, 100%);
+}
+
+.mr-paper-content {
+  padding: 32px;
+  color: #222;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.mr-paper-content h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.mr-paper-content h3 {
+  margin-bottom: 4px;
+}
+
+.mr-paper-content p {
+  white-space: pre-wrap;
+}
+
+.mr-signature {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+@media (max-width: 700px) {
+  .medical-reports-page {
+    padding: 14px;
+  }
+
+  .mr-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mr-summary {
+    gap: 9px;
+  }
+
+  .mr-summary > div {
+    padding: 12px;
+  }
+
+  .mr-summary span {
+    font-size: 0.76rem;
+  }
+
+  .mr-summary strong {
+    font-size: 1.35rem;
+  }
+
+  .mr-toolbar {
+    align-items: stretch;
+  }
+
+  .mr-toolbar select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .mr-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mr-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mr-paper-content {
+    padding: 20px;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #mr-print-area,
+  #mr-print-area * {
+    visibility: visible !important;
+  }
+
+  #mr-print-area {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .mr-no-print {
+    display: none !important;
+  }
+
+  .mr-paper-content {
+    padding: 0;
+  }
+}

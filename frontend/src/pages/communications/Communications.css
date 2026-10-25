@@ -1,0 +1,364 @@
+.communications-page {
+  --comm-border: #e2e8f0;
+  --comm-muted: #64748b;
+  --comm-text: #1e293b;
+  padding: 24px;
+  color: var(--comm-text);
+  min-width: 0;
+}
+
+.communications-page * {
+  box-sizing: border-box;
+}
+
+.communications-header,
+.communications-logs-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.communications-header {
+  margin-bottom: 24px;
+}
+
+.communications-eyebrow {
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.communications-header h1 {
+  margin: 7px 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.communications-header p,
+.communications-help {
+  color: var(--comm-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.communications-secondary-button,
+.communications-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.communications-secondary-button {
+  background: #fff;
+  border: 1px solid var(--comm-border);
+  color: var(--comm-text);
+}
+
+.communications-primary-button {
+  justify-self: start;
+  background: #1d4ed8;
+  border: 1px solid #1d4ed8;
+  color: white;
+}
+
+.communications-primary-button:hover:not(:disabled) {
+  background: #1e40af;
+}
+
+.communications-primary-button:disabled,
+.communications-secondary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.communications-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow-wrap: anywhere;
+}
+
+.communications-alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.communications-alert.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.communications-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--comm-border);
+}
+
+.communications-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--comm-muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.communications-tabs button.active {
+  color: #1d4ed8;
+  border-bottom-color: #2563eb;
+}
+
+.communications-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--comm-border);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.communications-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  margin: 0 0 14px;
+}
+
+.communications-help {
+  margin-bottom: 18px;
+}
+
+.communications-form {
+  display: grid;
+  gap: 16px;
+  max-width: 850px;
+}
+
+.communications-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.communications-form input:not([type="checkbox"]),
+.communications-form select,
+.communications-form textarea,
+.communications-logs-heading select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--comm-text);
+  font: inherit;
+}
+
+.communications-form textarea {
+  resize: vertical;
+}
+
+.communications-form input:focus,
+.communications-form select:focus,
+.communications-form textarea:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #3b82f6;
+}
+
+.communications-form .communications-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.communications-checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.communications-template-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.communications-template {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px;
+  border: 1px solid var(--comm-border);
+  border-radius: 9px;
+}
+
+.communications-template strong {
+  overflow-wrap: anywhere;
+}
+
+.communications-template p {
+  color: var(--comm-muted);
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+.communications-template span {
+  display: block;
+  color: #475569;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.communications-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.communications-row-actions button,
+.communications-table button {
+  padding: 7px 10px;
+  border: 1px solid var(--comm-border);
+  border-radius: 7px;
+  background: #fff;
+  color: #1d4ed8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.communications-row-actions .communications-delete {
+  display: grid;
+  place-items: center;
+  color: #b91c1c;
+}
+
+.communications-logs-heading {
+  margin-bottom: 16px;
+}
+
+.communications-logs-heading h2 {
+  margin: 0;
+}
+
+.communications-logs-heading select {
+  width: auto;
+  min-width: 140px;
+}
+
+.communications-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.communications-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+.communications-table th,
+.communications-table td {
+  padding: 13px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--comm-border);
+}
+
+.communications-table th {
+  color: var(--comm-muted);
+  background: #f8fafc;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.communications-table td small {
+  display: block;
+  max-width: 250px;
+  margin-top: 5px;
+  color: #b91c1c;
+  overflow-wrap: anywhere;
+}
+
+.communications-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.communications-status.sent {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.communications-status.failed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.communications-status.queued {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.communications-empty {
+  padding: 35px 10px;
+  text-align: center;
+  color: var(--comm-muted);
+}
+
+@media (max-width: 650px) {
+  .communications-page {
+    padding: 14px;
+  }
+
+  .communications-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .communications-card {
+    padding: 14px;
+  }
+
+  .communications-template {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .communications-logs-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .communications-logs-heading select {
+    width: 100%;
+  }
+
+  .communications-tabs button {
+    padding: 10px 8px;
+    font-size: 0.83rem;
+  }
+}

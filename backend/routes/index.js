@@ -1,0 +1,46 @@
+const express = require("express");
+
+const router = express.Router();
+
+router.use("/auth", require("./auth.routes"));
+router.use("/patients", require("./patients.routes"));
+router.use("/departments", require("./departments.routes"));
+router.use("/staff", require("./staff.routes"));
+router.use("/appointments", require("./appointments.routes"));
+router.use("/dashboard", require("./dashboard.routes"));
+router.use("/users", require("./users.routes"));
+router.use("/laboratory", require("./laboratory.routes"));
+router.use("/pharmacy", require("./pharmacy.routes"));
+router.use("/billing", require("./billing.routes"));
+router.use("/emr", require("./emr.routes"));
+router.use("/inpatient", require("./inpatient.routes"));
+router.use("/radiology", require("./radiology.routes"));
+router.use("/nursing", require("./nursing.routes"));
+router.use("/theatre", require("./theatre.routes"));
+router.use("/inventory", require("./inventoryProcurement.routes"));
+router.use("/icu", require("./icu.routes"));
+router.use("/maternity", require("./maternity.routes"));
+router.use("/blood-bank", require("./bloodBank.routes"));
+router.use("/insurance", require("./insurance.routes"));
+router.use("/payroll", require("./payroll.routes"));
+router.use("/audit-compliance", require("./auditCompliance.routes"));
+router.use("/reports", require("./reports.routes"));
+router.use("/settings", require("./settings.routes"));
+router.use("/queue", require("./queue.routes"));
+router.use("/notifications", require("./notifications.routes"));
+router.use("/ambulance", require("./ambulance.routes"));
+router.use("/telemedicine", require("./telemedicine.routes"));
+router.use("/slot-availability", require("./slotAvailability.routes"));
+router.use("/documents", require("./medicalDocuments.routes"));
+router.use("/medical-reports", require("./medicalReports.routes"));
+router.use("/calendar", require("./calendar.routes"));
+router.use("/equipment-maintenance", require("./equipmentMaintenance.routes"));
+router.use("/communications", require("./communications.routes"));
+router.use("/patient-feedback", require("./patientFeedback.routes"));
+router.use("/doctor-workspace", require("./doctorWorkspace.routes"));
+router.use("/infection-control", require("./infectionControl.routes"));
+router.use("/payments", require("./payments.routes"));
+router.use("/patient-portal", require("./patientPortal.routes"));
+router.use("/contact", require("./contact.routes"));
+
+module.exports = router;

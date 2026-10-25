@@ -1,0 +1,582 @@
+/* =========================================
+   MEDAXIS HOSPITAL - ABOUT PAGE
+   ========================================= */
+
+.medaxis-about {
+  --about-primary: #123c59;
+  --about-primary-dark: #0c2b42;
+  --about-accent: #18a995;
+  --about-text: #34465a;
+  --about-muted: #687b8e;
+  --about-light: #f4f8fb;
+  --about-border: #e0e9ef;
+
+  width: 100%;
+  overflow: hidden;
+  color: var(--about-text);
+  background: #ffffff;
+}
+
+.medaxis-about * {
+  box-sizing: border-box;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+/* Hero */
+
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 430px;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(24, 169, 149, 0.19),
+      transparent 32%
+    ),
+    linear-gradient(115deg, var(--about-primary-dark), var(--about-primary));
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  color: #8ee4d7;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+}
+
+.about-eyebrow-line {
+  width: 30px;
+  height: 2px;
+  background: #53d4bf;
+}
+
+.about-hero h1 {
+  max-width: 750px;
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+}
+
+.about-hero h1 span {
+  color: #69ddcb;
+}
+
+.about-hero-description {
+  max-width: 660px;
+  margin: 0 0 14px;
+  color: #e4edf5;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.about-hero-secondary {
+  max-width: 650px;
+  margin: 0 0 28px;
+  color: #bdcfdd;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-primary-button,
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 47px;
+  padding: 13px 20px;
+  color: #ffffff;
+  background: var(--about-accent);
+  border: 1px solid var(--about-accent);
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-primary-button:hover,
+.about-cta-button:hover {
+  color: #ffffff;
+  background: #138d7d;
+  transform: translateY(-2px);
+}
+
+.about-hero-decoration {
+  position: absolute;
+  right: 7%;
+  bottom: -85px;
+  color: rgba(255, 255, 255, 0.045);
+  font-size: 390px;
+  pointer-events: none;
+}
+
+/* Shared section headings */
+
+.about-section-label {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: var(--about-accent);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.7px;
+}
+
+.about-section-heading {
+  max-width: 690px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.about-section-heading h2,
+.about-intro-content h2,
+.about-care-content h2,
+.about-cta h2 {
+  margin: 0 0 16px;
+  color: var(--about-primary);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+}
+
+.about-section-heading > p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Introduction */
+
+.about-introduction {
+  padding: 82px 0;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  align-items: start;
+  gap: 65px;
+}
+
+.about-intro-mark {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 260px;
+  padding: 32px;
+  background: var(--about-light);
+  border: 1px solid var(--about-border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.about-intro-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 20px;
+  color: var(--about-accent);
+  background: #e0f5f0;
+  border-radius: 50%;
+  font-size: 42px;
+}
+
+.about-intro-mark > span {
+  color: var(--about-primary);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.about-intro-content h2 span {
+  color: var(--about-accent);
+}
+
+.about-intro-content > p,
+.about-care-content > p {
+  margin: 0 0 16px;
+  color: var(--about-muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Mission and vision */
+
+.about-purpose {
+  padding: 78px 0;
+  background: var(--about-light);
+}
+
+.about-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about-purpose-card {
+  padding: 34px;
+  background: #ffffff;
+  border: 1px solid var(--about-border);
+  border-radius: 11px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about-purpose-card:hover,
+.about-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(18, 60, 89, 0.08);
+}
+
+.about-purpose-card-accent {
+  border-top: 3px solid var(--about-accent);
+}
+
+.about-card-icon,
+.about-value-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  color: var(--about-accent);
+  background: #e8f7f4;
+  border-radius: 9px;
+  font-size: 23px;
+}
+
+.about-purpose-card h3,
+.about-value-card h3 {
+  margin: 0 0 12px;
+  color: var(--about-primary);
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.about-purpose-card p,
+.about-value-card p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 13.5px;
+  line-height: 1.9;
+}
+
+/* Values */
+
+.about-values {
+  padding: 82px 0;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-value-card {
+  padding: 25px 21px;
+  background: #ffffff;
+  border: 1px solid var(--about-border);
+  border-radius: 10px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about-value-icon {
+  width: 43px;
+  height: 43px;
+  margin-bottom: 19px;
+  font-size: 21px;
+}
+
+/* Healthcare services */
+
+.about-care {
+  padding: 80px 0;
+  background: var(--about-light);
+}
+
+.about-care-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 60px;
+}
+
+.about-care-content h2 {
+  margin-bottom: 20px;
+}
+
+.about-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+  color: #118e80;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.about-text-link:hover {
+  color: var(--about-primary);
+}
+
+.about-care-list {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid var(--about-border);
+  border-radius: 12px;
+}
+
+.about-care-list-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 23px;
+}
+
+.about-care-list-heading > svg {
+  flex-shrink: 0;
+  color: var(--about-accent);
+  font-size: 23px;
+}
+
+.about-care-list-heading h3 {
+  margin: 0;
+  color: var(--about-primary);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-care-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf1f4;
+}
+
+.about-care-item > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--about-accent);
+  font-size: 17px;
+}
+
+.about-care-item > span {
+  color: var(--about-text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.about-care-note {
+  margin: 18px 0 0;
+  color: var(--about-muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* Contact call to action */
+
+.about-cta {
+  padding: 55px 0;
+  background: #ffffff;
+}
+
+.about-cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background: var(--about-primary-dark);
+  border-radius: 12px;
+}
+
+.about-cta .about-section-label {
+  color: #69ddcb;
+}
+
+.about-cta h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 27px;
+}
+
+.about-cta-content p {
+  max-width: 600px;
+  margin: 0;
+  color: #c3d4e2;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-cta-button {
+  flex-shrink: 0;
+}
+
+/* Accessibility */
+
+.medaxis-about a:focus-visible {
+  outline: 3px solid var(--about-accent);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 950px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 32px;
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-care-grid {
+    gap: 32px;
+  }
+
+  .about-hero-decoration {
+    right: -80px;
+    font-size: 310px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .about-hero {
+    min-height: auto;
+  }
+
+  .about-hero-content {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .about-hero h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .about-hero-description {
+    font-size: 17px;
+  }
+
+  .about-hero-secondary {
+    font-size: 13px;
+  }
+
+  .about-hero-decoration {
+    right: -110px;
+    bottom: -55px;
+    font-size: 230px;
+  }
+
+  .about-introduction,
+  .about-purpose,
+  .about-values,
+  .about-care {
+    padding: 58px 0;
+  }
+
+  .about-intro-grid,
+  .about-purpose-grid,
+  .about-care-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .about-intro-mark {
+    min-height: 200px;
+  }
+
+  .about-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .about-section-heading h2,
+  .about-intro-content h2,
+  .about-care-content h2 {
+    font-size: 28px;
+  }
+
+  .about-values-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .about-value-card {
+    padding: 23px;
+  }
+
+  .about-care-list {
+    padding: 22px;
+  }
+
+  .about-cta {
+    padding: 35px 0;
+  }
+
+  .about-cta-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px 22px;
+  }
+
+  .about-cta h2 {
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medaxis-about *,
+  .medaxis-about *::before,
+  .medaxis-about *::after {
+    transition: none !important;
+  }
+}

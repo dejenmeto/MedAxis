@@ -1,0 +1,454 @@
+.ip-page {
+  --ip-primary: #245b82;
+  --ip-primary-dark: #194563;
+  --ip-border: #dfe6ec;
+  --ip-muted: #687787;
+  --ip-surface: #ffffff;
+  --ip-background: #f5f8fb;
+  --ip-text: #203040;
+
+  min-height: 100vh;
+  padding: 28px;
+  color: var(--ip-text);
+  background: var(--ip-background);
+}
+
+.ip-page * {
+  box-sizing: border-box;
+}
+
+.ip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.ip-header h1 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.ip-eyebrow {
+  margin: 0 0 8px;
+  color: var(--ip-primary);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.ip-subtitle {
+  margin: 8px 0 0;
+  color: var(--ip-muted);
+  line-height: 1.6;
+}
+
+.ip-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  padding: 10px 15px;
+  border: 1px solid var(--ip-primary);
+  border-radius: 8px;
+  color: #fff;
+  background: var(--ip-primary);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.ip-button:hover:not(:disabled) {
+  background: var(--ip-primary-dark);
+  border-color: var(--ip-primary-dark);
+}
+
+.ip-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ip-button-secondary {
+  color: var(--ip-text);
+  background: var(--ip-surface);
+  border-color: var(--ip-border);
+}
+
+.ip-button-secondary:hover:not(:disabled) {
+  color: var(--ip-primary);
+  background: #edf4f9;
+  border-color: #b9cfdf;
+}
+
+.ip-tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 22px;
+  padding: 5px;
+  overflow-x: auto;
+  border: 1px solid var(--ip-border);
+  border-radius: 10px;
+  background: var(--ip-surface);
+}
+
+.ip-tab {
+  flex: 0 0 auto;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 7px;
+  color: var(--ip-muted);
+  background: transparent;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ip-tab:hover {
+  color: var(--ip-primary);
+  background: #f1f6fa;
+}
+
+.ip-tab.active {
+  color: #fff;
+  background: var(--ip-primary);
+}
+
+.ip-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ip-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid var(--ip-border);
+  border-radius: 12px;
+  background: var(--ip-surface);
+}
+
+.ip-stat-card span {
+  color: var(--ip-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.ip-stat-card strong {
+  overflow-wrap: anywhere;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.ip-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ip-panel {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--ip-border);
+  border-radius: 12px;
+  background: var(--ip-surface);
+}
+
+.ip-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ip-panel-heading h2 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 720;
+}
+
+.ip-panel-heading span {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--ip-muted);
+  font-size: 0.8rem;
+}
+
+.ip-toolbar {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.ip-toolbar input {
+  flex: 1;
+  min-width: 0;
+}
+
+.ip-toolbar input,
+.ip-toolbar select,
+.ip-field input,
+.ip-field select,
+.ip-field textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #ccd6df;
+  border-radius: 7px;
+  outline: none;
+  color: var(--ip-text);
+  background: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.ip-toolbar input:focus,
+.ip-toolbar select:focus,
+.ip-field input:focus,
+.ip-field select:focus,
+.ip-field textarea:focus {
+  border-color: var(--ip-primary);
+  box-shadow: 0 0 0 3px rgb(36 91 130 / 10%);
+}
+
+.ip-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+  padding: 18px;
+  border: 1px solid var(--ip-border);
+  border-radius: 10px;
+  background: #f9fbfd;
+}
+
+.ip-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.ip-field > span {
+  color: #465767;
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.ip-form-actions {
+  display: flex;
+  align-items: flex-end;
+  grid-column: 1 / -1;
+}
+
+.ip-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--ip-border);
+  border-radius: 8px;
+}
+
+.ip-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.ip-table th,
+.ip-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid #e9eef2;
+  vertical-align: middle;
+}
+
+.ip-table th {
+  color: #596b7a;
+  background: #f6f8fa;
+  font-size: 0.76rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.ip-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.ip-table tbody tr:hover {
+  background: #f9fbfd;
+}
+
+.ip-table td {
+  line-height: 1.5;
+}
+
+.ip-table td strong,
+.ip-table td small {
+  display: block;
+}
+
+.ip-table td small {
+  margin-top: 3px;
+  color: var(--ip-muted);
+}
+
+.ip-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  color: #465767;
+  background: #edf1f4;
+  font-size: 0.73rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.ip-status.status-active,
+.ip-status.status-in_stock,
+.ip-status.status-approved,
+.ip-status.status-received {
+  color: #226543;
+  background: #e5f5ec;
+}
+
+.ip-status.status-low_stock,
+.ip-status.status-partially_received,
+.ip-status.status-submitted,
+.ip-status.status-ordered {
+  color: #895b0a;
+  background: #fff3d8;
+}
+
+.ip-status.status-out_of_stock,
+.ip-status.status-cancelled,
+.ip-status.status-inactive,
+.ip-status.status-adjustment_out,
+.ip-status.status-issue {
+  color: #a13c3c;
+  background: #fceaea;
+}
+
+.ip-text-button {
+  padding: 6px 0;
+  border: 0;
+  color: #a13c3c;
+  background: transparent;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.ip-text-button:hover {
+  text-decoration: underline;
+}
+
+.ip-empty {
+  padding: 28px !important;
+  color: var(--ip-muted);
+  text-align: center;
+}
+
+.ip-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 18px;
+  color: var(--ip-muted);
+  font-size: 0.85rem;
+}
+
+.ip-pagination > div {
+  display: flex;
+  gap: 8px;
+}
+
+.ip-help {
+  margin: 16px 0 0;
+  color: var(--ip-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1050px) {
+  .ip-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ip-two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .ip-page {
+    padding: 16px;
+  }
+
+  .ip-header {
+    flex-direction: column;
+  }
+
+  .ip-header > button {
+    width: 100%;
+  }
+
+  .ip-stat-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ip-stat-card {
+    padding: 17px;
+  }
+
+  .ip-panel {
+    padding: 14px;
+  }
+
+  .ip-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ip-panel-heading > button {
+    width: 100%;
+  }
+
+  .ip-form {
+    grid-template-columns: 1fr;
+    padding: 13px;
+  }
+
+  .ip-toolbar {
+    flex-direction: column;
+  }
+
+  .ip-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ip-pagination > div {
+    width: 100%;
+  }
+
+  .ip-pagination .ip-button {
+    flex: 1;
+  }
+}
