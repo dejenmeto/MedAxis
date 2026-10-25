@@ -93,7 +93,7 @@ function Contact() {
         <div className="contact-container">
           <span className="contact-eyebrow">
             <span />
-            WE ARE HERE TO HELP
+            WE ARE HERE TO HELP YOU
           </span>
 
           <h1>
@@ -106,9 +106,9 @@ function Contact() {
           </p>
 
           <div className="contact-breadcrumb">
-            <Link to="/">Home</Link>
+            {/* <Link to="/">Home</Link>
             <span>/</span>
-            <span>Contact</span>
+            <span>Contact</span> */}
           </div>
         </div>
       </section>
@@ -130,10 +130,7 @@ function Contact() {
             <div className="contact-information">
               <div className="contact-info-heading">
                 <h3>Contact Information</h3>
-                <p>
-                  Replace these details with your hospital's verified address,
-                  telephone number, and email address.
-                </p>
+                <p>here is the MedAxis hospital information contact.</p>
               </div>
 
               <div className="contact-info-card">
@@ -142,7 +139,7 @@ function Contact() {
                 </div>
                 <div>
                   <h4>Hospital Address</h4>
-                  <p>Add the official hospital address here.</p>
+                  <p>Addis Ababa Ethiopia.</p>
                 </div>
               </div>
 
@@ -152,7 +149,7 @@ function Contact() {
                 </div>
                 <div>
                   <h4>Telephone</h4>
-                  <p>Add the official hospital phone number here.</p>
+                  <p>+251 990749862</p>
                 </div>
               </div>
 
@@ -162,7 +159,7 @@ function Contact() {
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>Add the official hospital email address here.</p>
+                  <p>dejen613@gmail.com</p>
                 </div>
               </div>
 
@@ -172,7 +169,7 @@ function Contact() {
                 </div>
                 <div>
                   <h4>Working Hours</h4>
-                  <p>Add the hospital's confirmed office and service hours.</p>
+                  <p>07: 30 AM - 06: 30 PM </p>
                 </div>
               </div>
 
