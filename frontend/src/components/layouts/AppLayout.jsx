@@ -21,6 +21,7 @@ import {
   FiFileText,
   FiVideo,
   FiBell,
+  FiHome,
   FiDollarSign,
   FiDroplet,
   FiImage,
@@ -33,6 +34,7 @@ import {
 import "./AppLayout.css";
 
 const navigation = [
+  { label: "Public Website", path: "/", icon: FiHome, roles: [] },
   { label: "Dashboard", path: "/dashboard", icon: FiGrid, roles: [] },
   { label: "Patients", path: "/patients", icon: FiUsers, roles: [] },
   { label: "Appointments", path: "/appointments", icon: FiCalendar, roles: [] },

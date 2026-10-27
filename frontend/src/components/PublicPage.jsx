@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FiActivity,
@@ -191,9 +192,24 @@ export default function PublicPage({ page = "home" }) {
 }
 
 function PublicShell({ children }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="public-shell">
-      <header className="public-header">
+      <header className={`public-header${isScrolled ? " scrolled" : ""}`}>
         <Link to="/" className="public-brand">
           <span className="public-brand-mark">
             <FiActivity />
